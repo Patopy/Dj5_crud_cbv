@@ -1,0 +1,11 @@
+{%  extends "base.html" %}
+
+{% block container %}
+   <h2>Listado de Clientes</h2>
+   
+    {% for cliente in object_list %}
+            <p>{{cliente.nombre}}</p>
+    {% empty %}
+        <p>No existe cliente ...</p> 
+    {% endfor %}   
+{% endblock %}
