@@ -1,0 +1,12 @@
+{%  extends "base.html" %}
+
+{% block container %}
+    <div class="container">
+
+        <h1>Detalle del Objeto</h1>
+
+        <p>Nombre : {{ object.nombre }}</p>  
+        <p>Edad   : {{ object.edad }}</p> 
+        <a href="{% url 'AppClientes:list' %}">Volver a la lista</a>
+    </div>
+{% endblock %}

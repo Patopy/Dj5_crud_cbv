@@ -1,5 +1,31 @@
 _document.txt
 
+crear entorno para el proyecto 
+==============================
+
+python -m venv proyvenv
+
+activar entorno python
+======================
+source proyvenv/bin/activate
+
 Video
 
 https://www.youtube.com/watch?v=tfIgG-pZmyk&t=32s
+
+
+https://pypi.org/project/django-bootstrap-v5/
+
+
+pip install django
+
+pip install django-bootstrap-v5
+
+
+comando crear requirements
+==========================
+pip freeze > requirements.txt
+
+install requirements
+====================
+pip install -r requirements.txt

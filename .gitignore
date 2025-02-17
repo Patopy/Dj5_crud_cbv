@@ -1,1 +1,5 @@
+.gitignore
 _document.*
+tutorial_crud_cbv/proyvenv/
+proyvenv/
+__pycache__/

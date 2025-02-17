@@ -1,11 +1,39 @@
 {%  extends "base.html" %}
 
 {% block container %}
+<div class="container">
+
    <h2>Listado de Clientes</h2>
-   
-    {% for cliente in object_list %}
-            <p>{{cliente.nombre}}</p>
-    {% empty %}
-        <p>No existe cliente ...</p> 
-    {% endfor %}   
+
+   <a href="{% url 'AppClientes:create' %}" class="btn btn-primary">Nuevo Cliente</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cliente in object_list %}
+            <tr> 
+                 <td>{{cliente.nombre}}</td>
+                 <td>{{cliente.edad}}</td>
+                 <td>
+                    <a href="{% url 'AppClientes:detalle' cliente.id %}">Ver Detalle</a>  
+                </td>
+                <td>
+                    <a href="{% url 'AppClientes:update' cliente.id %}">Actualizar</a>  
+                </td>
+                <td>
+                    <a href="{% url 'AppClientes:delete' cliente.id %}">Borrar</a>  
+                </td>
+             </tr> 
+     {% empty %}
+         <tr>No existe cliente ...</tr> 
+     {% endfor %}
+        </tbody>
+    </table>
+    
+    </div>   
 {% endblock %}
