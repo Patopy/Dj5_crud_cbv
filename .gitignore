@@ -1,5 +1,10 @@
 .gitignore
 _document.*
+_document.txt
+
 tutorial_crud_cbv/proyvenv/
 proyvenv/
+tutorial_crud_cbv/migrations/
+migrations/
+tutorial_crud_cbv/__pycache__/
 __pycache__/

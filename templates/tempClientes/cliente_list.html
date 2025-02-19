@@ -12,6 +12,7 @@
             <tr>
                 <th>Nombre</th>
                 <th>Edad</th>
+                <th>Sexo</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
             <tr> 
                  <td>{{cliente.nombre}}</td>
                  <td>{{cliente.edad}}</td>
+                 <td>{{cliente.sexo}}</td>
                  <td>
                     <a href="{% url 'AppClientes:detalle' cliente.id %}">Ver Detalle</a>  
                 </td>
